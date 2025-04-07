@@ -6,7 +6,7 @@
 /*   By: tcali <tcali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 13:50:41 by tcali             #+#    #+#             */
-/*   Updated: 2025/04/07 16:25:54 by tcali            ###   ########.fr       */
+/*   Updated: 2025/04/07 16:29:20 by tcali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 // '<' takes the file as an input from the stdin
 // '|' redirects output of the previous cmd to the input of the next cmd
 // '>' "outfile redirection" writes the output of the last cmd into the outfile 
+
+// '<<' is an input "redirection" symbol. It makes the shell read from the standard input until it encounters only a specific LIMITER on the stdin.
+// '<<' ??
 
 int	main(int ac, char **av)
 {
