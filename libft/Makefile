@@ -68,7 +68,7 @@ PRINTF_FILES := \
 	ft_memset.c \
 	ft_parse_format.c \
 	ft_present.c \
-	ft_printf_fd.c \
+	ft_printf.c \
 	ft_putformat.c \
 	ft_putstr.c \
 	ft_render_format.c \

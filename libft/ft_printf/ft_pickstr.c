@@ -6,11 +6,11 @@
 /*   By: tcali <tcali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 23:17:43 by tcali             #+#    #+#             */
-/*   Updated: 2025/04/07 14:15:40 by tcali            ###   ########.fr       */
+/*   Updated: 2025/03/25 23:56:55 by tcali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf_fd.h"
+#include "../includes/ft_printf.h"
 #include <stdio.h>
 
 void	ft_pickstr(t_printf *list)

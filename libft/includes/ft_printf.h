@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_fd.h                                     :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tcali <tcali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 14:24:18 by tcali             #+#    #+#             */
-/*   Updated: 2025/04/07 14:09:02 by tcali            ###   ########.fr       */
+/*   Updated: 2025/04/10 15:19:51 by tcali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_FD_H
-# define FT_PRINTF_FD_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 # include <unistd.h>
 # include <stdarg.h>
 # include <stdlib.h>
@@ -40,13 +40,14 @@ typedef struct s_format
 typedef struct s_printf
 {
 	const char	*str;
-	int			fd;
 	va_list		ap;
 	int			nb_chars;
 	char		*ptr;
 	t_format	format;
+	int			fd;
 }				t_printf;
 
+int		ft_printf(const char *format, ...);
 int		ft_printf_fd(int fd, const char *format, ...);
 int		ft_parse_format(t_printf *list);
 void	*ft_memset(void *s, int c, size_t n);
@@ -69,7 +70,7 @@ char	*ft_itoa_base(t_printf *list, unsigned long nb);
 int		ft_strcpy(t_printf *list, char *src);
 int		ft_strlen_int(const char *str);
 void	ft_free(t_printf *list, char *str);
-void	ft_putchar(int fd, char c);
+void	ft_putchar(char c);
 void	ft_putformat(t_printf *list, char c);
 
 #endif

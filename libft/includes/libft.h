@@ -6,14 +6,14 @@
 /*   By: tcali <tcali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 22:02:06 by tcali             #+#    #+#             */
-/*   Updated: 2025/04/07 14:11:08 by tcali            ###   ########.fr       */
+/*   Updated: 2025/04/02 19:05:23 by tcali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <unistd.h>
-# include "../includes/ft_printf_fd.h"
+# include "../includes/ft_printf.h"
 # include "../includes/get_next_line.h"
 
 typedef struct s_content

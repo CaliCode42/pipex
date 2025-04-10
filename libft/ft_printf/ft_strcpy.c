@@ -6,11 +6,11 @@
 /*   By: tcali <tcali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 22:47:07 by tcali             #+#    #+#             */
-/*   Updated: 2025/04/07 14:15:10 by tcali            ###   ########.fr       */
+/*   Updated: 2025/03/25 23:57:16 by tcali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf_fd.h"
+#include "../includes/ft_printf.h"
 
 int	ft_strcpy(t_printf *list, char *src)
 {

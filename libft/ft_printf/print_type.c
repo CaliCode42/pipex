@@ -6,11 +6,11 @@
 /*   By: tcali <tcali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 14:57:35 by tcali             #+#    #+#             */
-/*   Updated: 2025/04/07 14:15:01 by tcali            ###   ########.fr       */
+/*   Updated: 2025/03/25 23:57:26 by tcali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf_fd.h"
+#include "../includes/ft_printf.h"
 
 static void	ft_put_n_char(t_printf *list, int precision, char c)
 {
