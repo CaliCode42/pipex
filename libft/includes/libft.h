@@ -6,13 +6,14 @@
 /*   By: tcali <tcali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 22:02:06 by tcali             #+#    #+#             */
-/*   Updated: 2025/04/02 19:05:23 by tcali            ###   ########.fr       */
+/*   Updated: 2025/04/10 20:20:09 by tcali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <unistd.h>
+# include <stdarg.h>
 # include "../includes/ft_printf.h"
 # include "../includes/get_next_line.h"
 
@@ -55,6 +56,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *s, int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+char	*ft_strsep(char **str_ptr, const char *sep);
+size_t	ft_strcspn(const char *str, const char *sep);
+int		ft_sprintf(char *str, const char *format, ...);
 /* ************************************************************************** */
 //Part 2 - Additional Functions
 char	*ft_itoa(int n);

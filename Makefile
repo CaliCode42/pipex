@@ -9,6 +9,7 @@ INCLUDE_DIR = includes
 # Sources
 SRC := \
 	pipex.c \
+	utils.c \
 
 #Path to sources
 VPATH = $(SRC_DIR) 
@@ -47,7 +48,7 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
-	@make -C $(MLX_DIR) clean
+	@make -C $(LIBFT_DIR) fclean
 
 re: fclean all
 

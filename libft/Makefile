@@ -44,6 +44,8 @@ SRC_FILES := \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
+	ft_strsep.c \
+	ft_strcspn.c \
 
 # Bonus Sources
 B_SRC := \
@@ -69,6 +71,11 @@ PRINTF_FILES := \
 	ft_parse_format.c \
 	ft_present.c \
 	ft_printf.c \
+	ft_sprintf.c \
+	ft_snprintf.c \
+	ft_sprintf_utils.c \
+	ft_sprintf_utils2.c \
+	ft_sprintf_utils3.c \
 	ft_putformat.c \
 	ft_putstr.c \
 	ft_render_format.c \

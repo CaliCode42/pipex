@@ -6,7 +6,7 @@
 /*   By: tcali <tcali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 14:24:18 by tcali             #+#    #+#             */
-/*   Updated: 2025/04/10 15:19:51 by tcali            ###   ########.fr       */
+/*   Updated: 2025/04/10 20:58:14 by tcali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <unistd.h>
 # include <stdarg.h>
 # include <stdlib.h>
+# include "../includes/libft.h"
 
 typedef struct s_format
 {
@@ -47,6 +48,15 @@ typedef struct s_printf
 	int			fd;
 }				t_printf;
 
+typedef struct s_sprintf
+{
+	char		*str;
+	const char	*format;
+	va_list		ap;
+	int			len;
+	char		*result;
+}	t_sprintf;
+
 int		ft_printf(const char *format, ...);
 int		ft_printf_fd(int fd, const char *format, ...);
 int		ft_parse_format(t_printf *list);
@@ -72,5 +82,21 @@ int		ft_strlen_int(const char *str);
 void	ft_free(t_printf *list, char *str);
 void	ft_putchar(char c);
 void	ft_putformat(t_printf *list, char c);
+
+//ft_sprintf
+int		ft_sprintf(char *str, const char *format, ...);
+char	*ft_process_format(t_sprintf *s);
+char	*ft_handle_format(t_sprintf *s, int *i);
+char	*ft_handle_char(t_sprintf *s);
+char	*ft_handle_string(t_sprintf *s);
+char	*ft_handle_int(t_sprintf *s);
+char	*ft_handle_unsigned(t_sprintf *s);
+char	*ft_handle_hex(t_sprintf *s);
+char	*ft_handle_pointer(t_sprintf *s);
+char	*ft_handle_percent(void);
+char	*ft_append_char(t_sprintf *s, char c);
+
+//ft_snprintf
+int		ft_snprintf(char *str, size_t size, const char *format, ...);
 
 #endif

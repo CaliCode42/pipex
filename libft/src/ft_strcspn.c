@@ -1,23 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strcspn.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tcali <tcali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 13:41:28 by tcali             #+#    #+#             */
-/*   Updated: 2024/11/08 13:41:28 by tcali            ###   ########.fr       */
+/*   Created: 2025/04/10 20:49:31 by tcali             #+#    #+#             */
+/*   Updated: 2025/04/10 20:49:31 by tcali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "../includes/libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+/*
+fct which calculates the length of the initial part of str until a character
+in sep is found.
+Returns nb of chars before first occurence.
+*/
+size_t	ft_strcspn(const char *str, const char *sep)
 {
-	unsigned char	*ptr;
+	size_t	i;
+	size_t	j;
 
-	ptr = (unsigned char *)s;
-	while (n-- > 0)
-		*(ptr++) = (unsigned char)c;
-	return (s);
+	i = 0;
+	while (str[i])
+	{
+		j = 0;
+		while (sep[j])
+		{
+			if (str[i] == sep[j])
+				return (i);
+			j++;
+		}
+		i++;
+	}
+	return (i);
 }
