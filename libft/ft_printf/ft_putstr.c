@@ -6,13 +6,14 @@
 /*   By: tcali <tcali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 00:01:57 by tcali             #+#    #+#             */
-/*   Updated: 2025/04/10 15:22:15 by tcali            ###   ########.fr       */
+/*   Updated: 2025/04/10 15:43:49 by tcali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
 #include "../includes/ft_printf.h"
+#include "../includes/libft.h"
 
 void	ft_check_prefix(t_printf *list)
 {
