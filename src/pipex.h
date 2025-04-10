@@ -22,20 +22,31 @@
 # include <string.h>
 # include "../libft/includes/libft.h"
 
-typedef struct s_fd
+typedef struct s_pipex_data
 {
-	int	in;
-	int	out;
-}		t_fd;
+	int		pipe_fd[2];
+	pid_t	pid1;
+	pid_t	pid2;
+	char	*cmd1;
+	char	*cmd2;
+	char	**envp;
+	char	*file1;
+	char	*file2;
+}		t_pipex_data;
 
 // Error handling
 void	error_exit(const char *msg, int exit_code);
 
 // Process handling
 void	execute_command(char *cmd, char **env);
+void	child(int pipe_fd[2], t_pipex_data *data, int is_first);
+void	parent(int pipe_fd[2], t_pipex_data *data);
 
 // Utility functions
 void	free_array(char **array);
 char	*get_command_path(char *cmd, char **env);
+void	init_pipex_data(t_pipex_data *data, char **av, char **env);
+void	free_pipex_data(t_pipex_data *data);
+char	*ft_str_threejoin(char const *s1, char const *s2, char const *s3);
 
 #endif 
